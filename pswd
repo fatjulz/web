@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Entry</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Nastaliq Urdu">
+    <style>
+        body {
+            background-image: url('https://images.genius.com/725c8129aaa858e49d89f3b12d2dd79c.1000x1000x1.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Noto Nastaliq Urdu', cursive;
+        }
+
+        #passwordForm {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #passwordInput {
+            padding: 10px;
+            font-family: 'Sedgwick Ave Display', cursive;
+        }
+
+        #message {
+            font-family: "Pixelated Font", monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordForm">
+        <h2 style='"https://fonts.googleapis.com/css?family=Sedgwick Ave Display: 'Sedwick Ave Display', monospace;">Enter Password:</h2>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <input type="button" value="Submit" onclick="checkPassword()">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById("passwordInput").value;
+            if (enteredPassword === "WSG") {
+                window.location.href = "https://example.com"; // Replace with your desired redirect URL
+            } else {
+                document.getElementById("message").innerHTML = "Dumb ahh foo";
+            }
+        }
+    </script>
+</body>
+</html>
