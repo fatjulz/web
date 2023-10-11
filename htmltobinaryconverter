@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML to Binary Converter</title>
+</head>
+<body>
+    <h1>HTML to Binary Converter</h1>
+
+    <label for="htmlInput">Enter HTML code:</label>
+    <textarea id="htmlInput" rows="10" cols="50"></textarea>
+
+    <button onclick="convertToBinary()">Convert to Binary</button>
+
+    <h2>Binary Output:</h2>
+    <p id="binaryOutput"></p>
+
+    <script>
+        function convertToBinary() {
+            const htmlInput = document.getElementById("htmlInput").value;
+            const binaryOutput = document.getElementById("binaryOutput");
+            
+            // Convert the HTML code to binary using a custom function
+            const binaryString = htmlToBinary(htmlInput);
+
+            // Display the binary output
+            binaryOutput.textContent = binaryString;
+        }
+
+        function htmlToBinary(html) {
+            let binary = '';
+            for (let i = 0; i < html.length; i++) {
+                binary += html[i].charCodeAt(0).toString(2).padStart(8, '0') + ' '; // Convert each character to binary
+            }
+            return binary;
+        }
+    </script>
+</body>
+</html>
