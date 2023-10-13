@@ -1,0 +1,51 @@
+    if (!isNaN(decimalValue)) {
+                    document.getElementById("binaryToDecimalResult").innerHTML = `Decimal Value: ${decimalValue}`;
+                } else {
+                    document.getElementById("binaryToDecimalResult").innerHTML = "Invalid binary input";
+                }
+            }
+
+            function convertDecimalToBinary() {
+                const decimalInput = document.getElementById("decimalInput").value;
+                const binaryValue = (decimalInput >>> 0).toString(2);
+
+                if (!isNaN(binaryValue)) {
+                    document.getElementById("decimalToBinaryResult").innerHTML = `Binary Value: ${binaryValue}`;
+                } else {
+                    document.getElementById("decimalToBinaryResult").innerHTML = "Invalid decimal input";
+                }
+            }
+        </script>
+    </div>
+    <a href="#" class="previous">&laquo; Previous</a>
+<a href="#" class="next">Next &raquo;</a>
+
+<a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a>
+    a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</body>
+
+</html></div>
